@@ -99,3 +99,12 @@ $("input.byline").keyup(function () {
  * @url http://forum.jquery.com/topic/get-current-year
  */
 $("span.year").text( (new Date).getFullYear() );
+
+/**
+ * body
+ */
+$("textarea.body").keyup(function () {
+  var value = $(this).val();
+  $("span.body").text(value);
+}).keyup();
+
