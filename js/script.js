@@ -103,12 +103,14 @@ $("span.year").text( (new Date).getFullYear() );
 /**
  * body
  *
- * replaces all instances of double-spacing (but not triple-spacing)
- *
  * every line except the first line needs four spaces of indentation. to do
  * this, replace each line break with a line break plus four spaces
  *
+ * if the second instance of a quote is the last character of a line, and if
+ * there is no space or new line following that character, the '' replace fails
+ *
  * @url http://stackoverflow.com/questions/2116558/fastest-method-to-replace-all-instances-of-a-character-in-a-string-javascript
+ * @url http://stackoverflow.com/questions/2202811/converting-straight-quotes-to-curly-quotes
  */
 $("textarea.body").keyup(function () {
   var value = $(this).val();
@@ -120,6 +122,10 @@ $("textarea.body").keyup(function () {
   value = value.replace( /@/g, "(at)" );
   /* replace - with _ */
   value = value.replace( /-/g, "_" );
+  /* replace the first instance of a double quote with `` */
+  value = value.replace( /"(?=\w|$)/g, "``" )
+  /* replace the other instance of a double quote (the only one remaining) with '' */
+  value = value.replace( /"/g, "''" )
   /* place the result in span.body */
   $("span.body").text(value);
 }).keyup();
