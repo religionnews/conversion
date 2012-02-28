@@ -66,6 +66,12 @@ $("input.wordcount").keyup(function () {
 }).keyup();
 
 /* photosof */
+$("input.photosof").keyup(function () {
+  var photosof = $("input.photosof").val();
+  if ( photosof != "" ) {
+    $("span.photosof").text( "^Eds: Photos of " + photosof + " are available via religionnews.com<");
+  }
+}).keyup();
 
 /* categories */
 $("input.categories").keyup(function () {
