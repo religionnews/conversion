@@ -41,7 +41,10 @@
     <form>
       <fieldset>
         <label>Slug <input type=text class=slug name=slug value="BC-RNS-SLUG-SLUG"></label>
-        <label>Label <input type=radio class=label name=label></label>
+        <label>Label</label>
+          <label>COMMENTARY <input type=radio class=label name=label value="COMMENTARY"></label>
+          <label>NEWS FEATURE <input type=radio class=label name=label value="NEWS FEATURE"></label>
+          <label>NEWS STORY <input type=radio class=label name=label value="NEWS STORY"></label>
         <label>Headline <input type=text class=headline name=headline></label>
         <label>Word count <input type=number class=wordcount name=wordcount></label>
         <label>Photos of <input type=text class=photosof name=photosof></label>
@@ -54,6 +57,7 @@
         <label>priority <input type=text class=priority name=priority value="r"></label>
         <label>category <input type=text class=category name=category value="c"></label>
         <label>format <input type=text class=format name=format value="bx"></label>
+        <label>categories <input type=text class=categories name=categories value="c, a"></label>
       </fieldset>
     </form>
 
@@ -66,7 +70,8 @@
       slug: ^<span class=slug></span><
       ^<span class=label></span><
       ^<span class=headline></span><
-      ^<span class=words></span> words<
+      ^<span class=wordcount></span> words<
+      <span class=photosof></span>
       ^Categories: <span class=categories></span><
       ^By <span class=byline></span><
       ^c. <span class=year></span> Religion News Service<
