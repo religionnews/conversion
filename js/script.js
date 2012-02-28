@@ -102,9 +102,20 @@ $("span.year").text( (new Date).getFullYear() );
 
 /**
  * body
+ *
+ * replaces all instances of double-spacing (but not triple-spacing)
+ *
+ * every line except the first line needs four spaces of indentation. to do
+ * this, replace each line break with a line break plus four spaces
+ *
+ * @url http://stackoverflow.com/questions/2116558/fastest-method-to-replace-all-instances-of-a-character-in-a-string-javascript
  */
 $("textarea.body").keyup(function () {
   var value = $(this).val();
+  /* replace double-spacing */
+  value = value.replace( /\n\n/g, "\n" );
+  /* append four spaces to second line and beyond */
+  value = value.replace( /\n/g, "\n    " );
   $("span.body").text(value);
 }).keyup();
 
