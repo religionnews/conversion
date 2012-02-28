@@ -116,6 +116,11 @@ $("textarea.body").keyup(function () {
   value = value.replace( /\n\n/g, "\n" );
   /* append four spaces to second line and beyond */
   value = value.replace( /\n/g, "\n    " );
+  /* replace @ with (at) */
+  value = value.replace( /@/g, "(at)" );
+  /* replace - with _ */
+  value = value.replace( /-/g, "_" );
+  /* place the result in span.body */
   $("span.body").text(value);
 }).keyup();
 
