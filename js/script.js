@@ -6,9 +6,9 @@
 /**
  * jQuery to update field as displayed in <pre>
  *
- * This probably could be more DRY-ish, but there are so few fields, and so
- * many small differences among the fields, that individually controlling them
- * seems easier right now
+ * This could be more DRY-ish, but there are so few fields, and so many small
+ * differences among the fields, that individually controlling them seems
+ * easier right now
  */
 
 /* ident */
@@ -107,7 +107,8 @@ $("span.year").text( (new Date).getFullYear() );
  * this, replace each line break with a line break plus four spaces
  *
  * if the second instance of a quote is the last character of a line, and if
- * there is no space or new line following that character, the '' replace fails
+ * there is no space or new line following that character, the '' replace
+ * fails.
  *
  * @url http://stackoverflow.com/questions/2116558/fastest-method-to-replace-all-instances-of-a-character-in-a-string-javascript
  * @url http://stackoverflow.com/questions/2202811/converting-straight-quotes-to-curly-quotes
@@ -123,9 +124,11 @@ $("textarea.body").keyup(function () {
   /* replace - with _ */
   value = value.replace( /-/g, "_" );
   /* replace the first instance of a double quote with `` */
-  value = value.replace( /"(?=\w|$)/g, "``" )
+  value = value.replace( /"(?=\w|$)/g, "``" );
   /* replace the other instance of a double quote (the only one remaining) with '' */
-  value = value.replace( /"/g, "''" )
+  value = value.replace( /"/g, "''" );
+  /* replace the first instance of a single quote (determined by whether a space precedes it) with ` */
+  value = value.replace( / '(?=\w|$)/g, " `" );
   /* place the result in span.body */
   $("span.body").text(value);
 }).keyup();
