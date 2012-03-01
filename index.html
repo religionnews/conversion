@@ -13,26 +13,110 @@
   </header>
   <div role="main">
 
-    <form>
+    <form class=form-horizontal>
       <fieldset>
-        <label>Slug <input type=text class=slug name=slug value="BC-RNS-SLUG-SLUG"></label>
-        <label>Label</label>
-          <label>COMMENTARY <input type=radio class=kicker name=kicker value="COMMENTARY"></label>
-          <label>NEWS FEATURE <input type=radio class=kicker name=kicker value="NEWS FEATURE"></label>
-          <label>NEWS STORY <input type=radio class=kicker name=kicker value="NEWS STORY"></label>
-        <label>Headline <input type=text class=headline name=headline></label>
-        <label>Word count <input type=number class=wordcount name=wordcount></label><label>Photos of <input type=text class=photosof name=photosof></label>
-        <label>Byline <input type=text class=byline name=byline></label>
-        <label>Body <textarea class=body></textarea></label>
-        <span>Add a blank line at the end of the body field to ensure all quotes are converted properly</span>
+        <legend>Story</legend>
+
+        <div class=control-group>
+          <label class=control-label for=slug>Slug</label>
+          <div class=controls>
+            <input type=text class=slug name=slug value="BC-RNS-SLUG-SLUG"></label>
+          </div>
+        </div>
+
+        <div class=control-group>
+          <label class=control-label for=kicker>Label</label>
+          <div class=controls>
+            <label class=radio><input type=radio class=kicker name=kicker value="COMMENTARY"> COMMENTARY</label>
+            <label class=radio><input type=radio class=kicker name=kicker value="NEWS FEATURE"> NEWS FEATURE</label>
+            <label class=radio><input type=radio class=kicker name=kicker value="NEWS STORY"> NEWS STORY</label>
+          </div>
+        </div>
+
+        <div class=control-group>
+          <label class=control-label for=headline>Headline</label>
+          <div class=controls>
+            <input type=text class=headline name=headline>
+          </div>
+        </div>
+
+        <div class=control-group>
+          <label class=control-label for=wordcount>Word count</label>
+          <div class=controls>
+            <input type=number class=wordcount name=wordcount>
+          </div>
+        </div>
+
+        <div class=control-group>
+          <label class=control-label for=photosof>Photos of</label>
+          <div class=controls>
+            <input type=text class=photosof name=photosof>
+          </div>
+        </div>
+
+        <div class=control-group>
+          <label class=control-label for=byline>Byline</label>
+          <div class=controls>
+            <input type=text class=byline name=byline>
+          </div>
+        </div>
+
+        <div class=control-group>
+          <label class=control-label for=body>Body</label>
+          <div class=controls>
+            <textarea class=body></textarea>
+            <p class=help-block>Add a blank line at the end of the body field to ensure all quotes are converted properly</p>
+          </div>
+        </div>
+
       </fieldset>
+
+
       <fieldset>
-        <label>ident <input type=text class=ident name=ident value="Q"></label>
-        <label>selector <input type=text class=selector name=selector value="rnstr"></label>
-        <label>priority <input type=text class=priority name=priority value="r"></label>
-        <label>category <input type=text class=category name=category value="c"></label>
-        <label>format <input type=text class=format name=format value="bx"></label>
-        <label>categories <input type=text class=categories name=categories value="c, a"></label>
+        <legend>Metadata</legend>
+
+        <div class=control-group>
+          <label class=control-label for=ident>ident</label>
+          <div class=controls>
+            <input type=text class=ident name=ident value="Q">
+          </div>
+        </div>
+
+        <div class=control-group>
+          <label class=control-label for=selector>selector</label>
+          <div class=controls>
+            <input type=text class=selector name=selector value="rnstr">
+          </div>
+        </div>
+
+        <div class=control-group>
+          <label class=control-label for=priority>priority</label>
+          <div class=controls>
+            <input type=text class=priority name=priority value="r">
+          </div>
+        </div>
+
+        <div class=control-group>
+          <label class=control-label for=category>category</label>
+          <div class=controls>
+            <input type=text class=category name=category value="c">
+          </div>
+        </div>
+
+        <div class=control-group>
+          <label class=control-label for=format>format</label>
+          <div class=controls>
+            <input type=text class=format name=format value="bx">
+          </div>
+        </div>
+
+        <div class=control-group>
+          <label class=control-label for=categories>categories</label>
+          <div class=controls>
+            <input type=text class=categories name=categories value="c, a">
+          </div>
+        </div>
+
       </fieldset>
     </form>
 
