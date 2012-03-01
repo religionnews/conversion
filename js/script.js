@@ -110,6 +110,7 @@ $("span.year").text( (new Date).getFullYear() );
  * there is no space or new line following that character, the '' replace
  * fails.
  *
+ * @url http://dan.hersam.com/tools/smart-quotes.html
  * @url http://stackoverflow.com/questions/2116558/fastest-method-to-replace-all-instances-of-a-character-in-a-string-javascript
  * @url http://stackoverflow.com/questions/2202811/converting-straight-quotes-to-curly-quotes
  */
@@ -119,6 +120,22 @@ $("textarea.body").keyup(function () {
   value = value.replace( /\n\n/g, "\n" );
   /* append four spaces to second line and beyond */
   value = value.replace( /\n/g, "\n    " );
+  /* replace a bunch of smart quotes and other fancy stuff */
+  value = value.replace( /\u2018|\u2019|\u201A|\uFFFD/g, "'" );
+  value = value.replace( /\u201c|\u201d|\u201e/g, '"' );
+  value = value.replace( /\u02C6/g, '^' );
+  value = value.replace( /\u2039/g, '<' );
+  value = value.replace( /\u203A/g, '>' );
+  value = value.replace( /\u2013/g, '-' );
+  value = value.replace( /\u2014/g, '--' );
+  value = value.replace( /\u2026/g, '...' );
+  value = value.replace( /\u00A9/g, '(c)' );
+  value = value.replace( /\u00AE/g, '(r)' );
+  value = value.replace( /\u2122/g, 'TM' );
+  value = value.replace( /\u00BC/g, '1/4' );
+  value = value.replace( /\u00BD/g, '1/2' );
+  value = value.replace( /\u00BE/g, '3/4' );
+  value = value.replace(/[\u02DC|\u00A0]/g, " ");  
   /* replace @ with (at) */
   value = value.replace( /@/g, "(at)" );
   /* replace - with _ */
