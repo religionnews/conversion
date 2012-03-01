@@ -41,9 +41,15 @@ $("input.format").keyup(function () {
   $("span.format").text(value);
 }).keyup();
 
-/* slug */
+/**
+ * slug
+ *
+ * automatically uppercase
+ *
+ * @url http://jquerybyexample.blogspot.com/2010/09/jquery-code-convert-string-value-to.html
+ */
 $("input.slug").keyup(function () {
-  var value = $(this).val();
+  var value = $(this).val().toUpperCase();
   $("span.slug").text(value);
 }).keyup();
 
