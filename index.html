@@ -8,12 +8,16 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-  <header>
-
+  <header class=page-header>
+    <h1>Conversion</h1>
   </header>
-  <div role="main">
+  <div role="main" class=container>
 
-    <form class=form-horizontal>
+    <div class=row>
+
+    <div class=span5>
+      <h1>Input</h1>
+    <form>
       <fieldset>
         <legend>Story</legend>
 
@@ -64,7 +68,7 @@
         <div class=control-group>
           <label class=control-label for=body>Body</label>
           <div class=controls>
-            <textarea class=body></textarea>
+            <textarea class="body span5" name=body rows=25></textarea>
             <p class=help-block>Add a blank line at the end of the body field to ensure all quotes are converted properly</p>
           </div>
         </div>
@@ -119,7 +123,10 @@
 
       </fieldset>
     </form>
+    </div><!-- .span5 -->
 
+    <div class=span7>
+      <h1>Output</h1>
     <pre>
 ident: <span class=ident></span>
 selector: <span class=selector></span>
@@ -135,8 +142,11 @@ slug: ^<span class=slug></span><
 ^c. <span class=year></span> Religion News Service<
 <span class=body></span>
     </pre>
+    </div><!-- .span7 -->
 
-  </div>
+    </div><!-- .row -->
+
+  </div><!-- .container -->
   <footer>
 
   </footer>
