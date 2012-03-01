@@ -68,8 +68,10 @@ $("input.wordcount").keyup(function () {
 /* photosof */
 $("input.photosof").keyup(function () {
   var photosof = $("input.photosof").val();
-  if ( photosof != "" ) {
-    $("span.photosof").text( "^Eds: Photos of " + photosof + " are available via religionnews.com<");
+  if ( photosof ) {
+    $("span.photosof").text( "\n^Eds: Photos of " + photosof + " are available via religionnews.com<");
+  } else {
+    $("span.photosof").empty();
   }
 }).keyup();
 
