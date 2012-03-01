@@ -20,7 +20,7 @@
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
-  <!--<link rel="stylesheet" href="css/style.css">-->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
 
   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
 
@@ -42,9 +42,9 @@
       <fieldset>
         <label>Slug <input type=text class=slug name=slug value="BC-RNS-SLUG-SLUG"></label>
         <label>Label</label>
-          <label>COMMENTARY <input type=radio class=label name=label value="COMMENTARY"></label>
-          <label>NEWS FEATURE <input type=radio class=label name=label value="NEWS FEATURE"></label>
-          <label>NEWS STORY <input type=radio class=label name=label value="NEWS STORY"></label>
+          <label>COMMENTARY <input type=radio class=kicker name=kicker value="COMMENTARY"></label>
+          <label>NEWS FEATURE <input type=radio class=kicker name=kicker value="NEWS FEATURE"></label>
+          <label>NEWS STORY <input type=radio class=kicker name=kicker value="NEWS STORY"></label>
         <label>Headline <input type=text class=headline name=headline></label>
         <label>Word count <input type=number class=wordcount name=wordcount></label><label>Photos of <input type=text class=photosof name=photosof></label>
         <label>Byline <input type=text class=byline name=byline></label>
@@ -68,7 +68,7 @@ priority: <span class=priority></span>
 category: <span class=category></span>
 format: <span class=format></span>
 slug: ^<span class=slug></span><
-^<span class=label></span><
+^<span class=kicker></span><
 ^<span class=headline></span><
 ^<span class=wordcount></span> words< <span class=photosof></span>
 ^Categories: <span class=categories></span><

@@ -47,10 +47,10 @@ $("input.slug").keyup(function () {
   $("span.slug").text(value);
 }).keyup();
 
-/* label */
-$("input.label").click(function () {
-  var value = $('input:radio[name=label]:checked').val();
-  $("span.label").text(value);
+/* kicker */
+$("input.kicker").click(function () {
+  var value = $('input:radio[name=kicker]:checked').val();
+  $("span.kicker").text(value);
 }).keyup();
 
 /* headline */
