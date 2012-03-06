@@ -1,13 +1,5 @@
 @import "bootstrap";
 
-h1 {
-  color: #bd2403;
-}
-h2 {
-  color: #005F7D;
-  margin-bottom: 9px;
-}
-legend {
-  color: #B0AEA7;
-  text-transform: uppercase;
-}
+$blue: #005f7d;
+$gray: #b0aea7;
+$red: #bd2403;
