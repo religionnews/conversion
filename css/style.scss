@@ -3,3 +3,9 @@
 $blue: #005f7d;
 $gray: #b0aea7;
 $red: #bd2403;
+
+
+/* kill extra margin-bottom under <legend> */
+legend {
+  margin-bottom: 0;
+}
